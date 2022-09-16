@@ -62,3 +62,32 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Steps Followed to achieve the shop catalog CRUD
+Run command and create laravel project using CMD 
+i.e composer create-project laravel/laravel product_curd
+
+Create git repository for the created project after that link the repo remotely to project using git command 
+i.e git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://github.com/Urvi122333/product_curd.git
+    git push -u origin master
+
+Start laravel server by using php artisan serve command.
+Create database locally and then change the .env file mention hostname.
+Create Controller by using php artisan male:controller ProductController
+Create Migration by using php artisan make:migration create_products_model_table
+Add required db chnges in the file once done 
+Run php artisan migrate
+Create the function in controller and then specify the routing in api.php under routes folder
+include the controller on top of file
+Once chnges done git status, git add -A , git commit -m "Files uploaded", git push -u origin master
+
+Hit Url in postman 
+Add -http://127.0.0.1:8000/api/addproduct
+Get -http://127.0.0.1:8000/api/fetchproduct
+Update -http://127.0.0.1:8000/api/editproduct
+Delete - http://127.0.0.1:8000/api/cancelproduct/11
+
